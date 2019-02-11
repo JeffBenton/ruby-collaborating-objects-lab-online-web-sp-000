@@ -11,6 +11,7 @@ class Song
     song = Song.new(data[1])
     song.artist = data[0]
     song.genre = data[2].chomp(".mp3")
+    song
   end
   
   def self.all
