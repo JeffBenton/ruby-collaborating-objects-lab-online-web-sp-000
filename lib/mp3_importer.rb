@@ -6,8 +6,10 @@ class MP3Importer
   end
   
   def files
-    Dir["#{path}/*.mp3"].collect do |file_path|
-      file_path.slice("#{path}/")
+    files = Dir["#{path}/*.mp3"]
+    files.each do |file_path|
+      file_path.slice!("#{path}/")
     end
+    files
   end
 end
