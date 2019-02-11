@@ -10,7 +10,7 @@ class Song
     data = path.split(" - ")
     song = Song.new(data[1])
     song.artist = data[0]
-    song.genre = data[2].trim(".mp3")
+    song.genre = data[2].chomp(".mp3")
   end
   
   def self.all
