@@ -6,6 +6,6 @@ class MP3Importer
   end
   
   def files
-    puts Dir["#{path}"]
+    puts Dir["#{path}/*.mp3"]
   end
 end
