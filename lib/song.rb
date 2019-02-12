@@ -11,7 +11,6 @@ class Song
     song = Song.new(data[1])
     song.artist = Artist.find_or_create_by_name(data[0])
     song.genre = data[2].chomp(".mp3")
-    puts self.all
     song
   end
   
